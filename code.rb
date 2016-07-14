@@ -15,6 +15,34 @@ def nuclear_radius_femtometers(nucleon_count)
 end
 
 velocity = velocity_from_ke_and_mass(ALPHA_KINETIC_ENERGY_MEV, ALPHA_REST_MASS_MEV)
+# femptometers per second
 diameter = nuclear_radius_femtometers(PO212_NUCLEON_COUNT) * 2;
+# femtometers
 
 (velocity*diameter)/PO212_HALF_LIFE_MICROSEC
+
+#########################################################
+
+# fm * 10 ** 23 per second
+puts velocity
+puts diameter
+puts ( velocity / diameter ) * 10 ** 23
+(velocity*diameter) # /PO212_HALF_LIFE_MICROSEC
+
+#4.42 e 20 different collisisons per second
+#50% chance of a collission tunneling = 0.3 microseconds = 3e-7 seconds
+
+#? sided die...after 10 times equal 50% probablity
+#X/10 = 0.50
+#Success/Total Trials
+#X = 0.50*10
+#X = 5
+
+#4.42e 20*3e-7 seconds get you the total number of collisions altogether
+# (1/COLLISIONS)....but only the 50% chance of that collisison, so we double it. 
+
+#1.326e14
+
+#(1/1.326e14)/0.50 = 1.5082956e-14%
+
+#1000 times to get 5 success = 5/1000
